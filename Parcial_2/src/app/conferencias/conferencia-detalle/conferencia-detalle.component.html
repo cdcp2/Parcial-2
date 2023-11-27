@@ -1,0 +1,12 @@
+<div *ngIf="conferencia" class="card shadow-sm">
+  <div class="row g-0">
+    <div class="col-md-12">
+      <div class="card-body">
+        <h5 class="card-title">{{ conferencia.nombre }}</h5>
+        <p class="card-text">{{ conferencia.ubicacion }}</p>
+        <p class="card-text">Fecha de inicio: {{ conferencia.fecha_inicio | date:'mediumDate' }}</p>
+        <p class="card-text">Fecha de fin: {{ conferencia.fecha_fin | date:'mediumDate' }}</p>
+      </div>
+    </div>
+  </div>
+</div>

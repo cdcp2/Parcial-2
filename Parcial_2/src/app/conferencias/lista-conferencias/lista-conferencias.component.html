@@ -1,0 +1,27 @@
+<div class="container mt-5">
+  <h2>Lista de Conferencias</h2>
+  <div class="row">
+    <div class="col-md-8">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Ubicación</th>
+            <th>Fecha de Inicio</th>
+            <th>Fecha de Fin</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let conferencia of listaConferencias">
+            <td>{{ conferencia.id }}</td>
+            <td><a href="#" (click)="activarDetalle(conferencia.id); $event.preventDefault()">{{ conferencia.nombre }}</a></td>
+            <td>{{ conferencia.ubicacion }}</td>
+            <td>{{ conferencia.fecha_inicio }}</td>
+            <td>{{ conferencia.fecha_fin }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
